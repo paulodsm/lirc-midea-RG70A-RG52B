@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 
+# This script generates lirc raw codes for Midea remote controls RG70A / RG52B
 #####################################
 
 #fan, cool, heat, auto

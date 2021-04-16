@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- 
 #
 # Python script that decodes **Midea Signals** (Pulses and Spaces) from mode2 lirc into 24-bit data
 #

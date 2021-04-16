@@ -4,7 +4,7 @@ import sys
 # This script generates lirc raw codes for Midea remote controls RG70A / RG52B
 #####################################
 
-#fan, cool, heat, auto
+#fan, cool, heat, auto 
 mode_list=['fan','cool','heat']
 
 #auto, low, med, max

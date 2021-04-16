@@ -24,7 +24,7 @@ for i in raw:
 #print(values_tot)
 
 
-#ys.exit(1)
+#sys.exit(1)
 
 k=0
 for values in values_tot:

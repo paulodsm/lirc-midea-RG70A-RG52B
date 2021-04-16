@@ -18,11 +18,10 @@
 		$fan = $_POST['fan'];
 		$temp = $_POST['temp'];
 		$status = $_POST['status'];
-		#echo $status . '-' . $mode . '-' . $fan . '-' . $temp;
 		
 		if ($status == 'OFF'){exec('irsend SEND_ONCE MIDEA_RAW off');}
 		
-		if ($status == 'SILENCIAR'){exec('irsend SEND_ONCE MIDEA_RAW silent');}
+		if ($status == 'SILENT / LED OFF'){exec('irsend SEND_ONCE MIDEA_RAW silent');}
 		
 		if ($mode == 'fan'){
 			$temp='off';
@@ -37,7 +36,7 @@
 		
 		
 		
-		if ($status == 'ON / Alterar'){exec('irsend SEND_ONCE MIDEA_RAW S.on-M.'.$mode.'-F.'.$fan.'-T.'.$temp);}
+		if ($status == 'ON / Change'){exec('irsend SEND_ONCE MIDEA_RAW S.on-M.'.$mode.'-F.'.$fan.'-T.'.$temp);}
 		
 		if ($temp == 'off'){$temp='25';}
 		
@@ -139,19 +138,19 @@ background:#E6E6E6;
 <form action="." method="post">
   <p>Modo:
   <input type="radio" id="fan" name="mode" value="fan" <?php echo $check_mode[0]; ?>>
-  <label for="fan">Ventilar</label>
+  <label for="fan">Fan</label>
   <input type="radio" id="cool" name="mode" value="cool" <?php echo $check_mode[1]; ?>>
-  <label for="cool">Frio</label>
+  <label for="cool">Cool</label>
   <input type="radio" id="heat" name="mode" value="heat" <?php echo $check_mode[2]; ?>>
-  <label for="heat">Quente</label></p>
+  <label for="heat">Heat</label></p>
 
   <p>Ventilação:
   <input type="radio" id="low" name="fan" value="low" <?php echo $check_fan[0]; ?>>  
-  <label for="low">Fraca</label>
+  <label for="low">Low</label>
   <input type="radio" id="med" name="fan" value="med" <?php echo $check_fan[1]; ?>>
-  <label for="med">Média</label>
+  <label for="med">Med</label>
   <input type="radio" id="max" name="fan" value="max" <?php echo $check_fan[2]; ?>>
-  <label for="max">Forte</label></p>
+  <label for="max">Max</label></p>
   
 
   Temperatura:
@@ -162,10 +161,10 @@ background:#E6E6E6;
   </div>
 
   <p>
-  <input type="submit" name="status" value="ON / Alterar" style="font-size:20px; height:30px; width: 180px;">
+  <input type="submit" name="status" value="ON / Change" style="font-size:20px; height:30px; width: 180px;">
   </p>
   <p>
-  <input type="submit" name="status" value="SILENCIAR" style="font-size:20px; height:30px; width: 180px;" />
+  <input type="submit" name="status" value="SILENT / LED OFF" style="font-size:20px; height:30px; width: 180px;" />
   </p>
   <p>
   <input type="submit" name="status" value="OFF" style="font-size:20px; height:30px; width: 180px;" />

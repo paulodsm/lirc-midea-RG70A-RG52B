@@ -1,0 +1,65 @@
+#
+#Special thanks to https://github.com/sheinz
+#
+
+Code tested on Midea Remote Controls models RG70A and RG52B
+
+24 bits
+
+C.constant - 8 bits
+F.an - 4 bits
+S.tatus - 4 bits
+T.emperature - 4 bits
+M.ode - 4 bits
+
+CCCCCCCC FFFFSSSS TTTTMMMM
+
+C = 10110010
+
+FFFF
+1011 - automatic or 0
+1001 - low speed
+0101 - medium speed
+0011 - high speed
+
+SSSS
+1111 - on
+1011 - off
+
+
+TTTT
+0000 - 17 C
+0001 - 18 C
+0011 - 19 C
+0010 - 20 C
+0110 - 21 C
+0111 - 22 C
+0101 - 23 C
+0100 - 24 C
+1100 - 25 C
+1101 - 26 C
+1001 - 27 C
+1000 - 28 C
+1010 - 29 C
+1011 - 30 C
+1110 - off or fan
+ 
+MMMM
+0000 - cool
+1100 - heat
+1000 - automatic
+0100 - fan
+
+
+Examples
+ccccccccffffssssttttmmmm
+
+off
+101100100111101111100000
+
+S.on-M.cool-F.low-T.25
+101100101001111111000000
+
+silent (not decoded)
+101101011111010110000110
+
